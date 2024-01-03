@@ -1,0 +1,6 @@
+LH8869,Lemonheads,20
+AH1289,Airheads,15
+PM1889,black permanent marker,12
+DE6785,black dry erase marker,8
+DE8079,red dry erase marker,13
+BS3045,box of staples,15
