@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+
+<?import javafx.scene.control.ScrollPane?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="edu.virginia.sde.reviews.MyReviewsController" spacing="20" style="-fx-padding: 20; -fx-background-color: #f4f4f4;">
+    <!-- Header -->
+    <Label text="My Reviews" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <ScrollPane fitToWidth="true">
+        <VBox fx:id="reviewListContainer" spacing="10" style="-fx-background-color: #ffffff; -fx-padding: 10; -fx-border-color: lightgray; -fx-border-radius: 5; -fx-background-radius: 5;">
+
+        </VBox>
+    </ScrollPane>
+
+
+    <!-- Back Button -->
+    <HBox alignment="CENTER_RIGHT" spacing="10">
+        <Button fx:id="backButton" text="Back" style="-fx-font-size: 14px;" onAction="#handleBack" />
+    </HBox>
+</VBox>
+

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="edu.virginia.sde.reviews.CourseSearchController">
+    <!-- Top Region -->
+    <top>
+        <HBox spacing="10" alignment="CENTER" BorderPane.alignment="CENTER">
+            <!-- Logout Button -->
+            <Button text="Logout" fx:id="logoutButton" onAction="#handleLogout" />
+
+            <!-- Spacer to push buttons to the right -->
+            <Region HBox.hgrow="ALWAYS" />
+
+            <!-- My Reviews Button -->
+            <Button text="My Reviews" fx:id="myReviewsButton" onAction="#handleMyReviews" />
+        </HBox>
+    </top>
+
+    <!-- Center Region -->
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="10" BorderPane.alignment="CENTER" style="-fx-padding: 20 20 0 20;">
+            <!-- Course Search Label -->
+            <Label text="Course Search" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+            <!-- Search Fields -->
+            <HBox alignment="CENTER" spacing="10">
+                <TextField fx:id="subjectField" promptText="Subject (e.g., CS)" />
+                <TextField fx:id="numberField" promptText="Number (e.g., 3140)" />
+                <TextField fx:id="titleField" promptText="Title (e.g., Software)" />
+                <Button text="Search" fx:id="searchButton" onAction="#handleSearch" />
+            </HBox>
+
+            <!-- Course List -->
+            <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+                <VBox fx:id="courseListContainer" spacing="10" style="-fx-background-color: #f9f9f9; -fx-padding: 10;">
+                    <!-- Course entries will be dynamically added here -->
+                </VBox>
+            </ScrollPane>
+        </VBox>
+    </center>
+
+    <!-- Bottom Region -->
+    <bottom>
+        <VBox spacing="10" alignment="CENTER" BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER" spacing="10">
+                <TextField fx:id="addSubjectField" promptText="Subject (e.g., CS)" />
+                <TextField fx:id="addNumberField" promptText="Number (e.g., 3140)" />
+                <TextField fx:id="addTitleField" promptText="Title (e.g., Software)" />
+                <Button text="Add" fx:id="addCourseButton" onAction="#handleAddCourse" />
+                <Label fx:id="addErrorMessage" textFill="red" visible="false" />
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

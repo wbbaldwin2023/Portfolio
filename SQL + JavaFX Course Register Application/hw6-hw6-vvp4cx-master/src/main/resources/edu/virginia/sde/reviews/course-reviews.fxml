@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="edu.virginia.sde.reviews.CourseReviewController">
+    <!-- Top Region -->
+    <top>
+        <VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 20;">
+            <Label fx:id="courseMnemonicLabel" text="CS 3140" style="-fx-font-size: 18px;" />
+            <Label fx:id="courseTitleLabel" text="Course Title Here" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+            <Label fx:id="averageReviewLabel" text="Average Review: No reviews rated yet" style="-fx-font-size: 16px;" />
+        </VBox>
+    </top>
+
+    <!-- Center Region -->
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="10" BorderPane.alignment="CENTER" style="-fx-padding: 20 20 0 20;">
+            <!-- Review List -->
+            <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+                <VBox fx:id="reviewListContainer" spacing="10" style="-fx-background-color: #f9f9f9; -fx-padding: 10;">
+                    <!-- Review entries will be dynamically added here -->
+                </VBox>
+            </ScrollPane>
+        </VBox>
+    </center>
+
+    <!-- Bottom Region -->
+    <bottom>
+        <VBox spacing="20" alignment="CENTER" BorderPane.alignment="CENTER">
+            <!-- Add Review Section -->
+            <HBox alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+                <TextField fx:id="reviewRatingField" promptText="Review Rating (1-5)" />
+                <TextField fx:id="reviewCommentField" promptText="Comment (Optional)" prefWidth="400" />
+                <Button text="Add Review" fx:id="addReviewButton" onAction="#handleAddReview" />
+            </HBox>
+            <Label fx:id="addReviewErrorLabel" textFill="red" visible="false" />
+            <!-- Back Button -->
+            <Button text="Back" fx:id="backButton" onAction="#handleBack" style="-fx-font-size: 14px;" />
+        </VBox>
+    </bottom>
+</BorderPane>
+
